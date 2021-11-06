@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "start": "node ./src/app.js",
-    "dev": "nodemon ./src/app.js"
+    "dev": "nodemon ./src/app.js",
+    "deploy": "bash ./scripts/deploy.sh"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
