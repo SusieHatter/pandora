@@ -1,10 +1,17 @@
 import express from "express";
+import cors from "cors";
 import dotenv from "dotenv";
 import { getAllCommits } from "./api/github.js";
 
 dotenv.config();
 
 const app = express();
+
+app.use(
+  cors({
+    origin: [/susie.mx$/, /localhost/, /127.0.0.1/],
+  })
+);
 
 app.get("/github/all_commits", async (req, res) => {
   console.log("fetching all commits");
